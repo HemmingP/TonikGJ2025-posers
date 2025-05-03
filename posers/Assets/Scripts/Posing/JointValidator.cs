@@ -55,13 +55,30 @@ public class JointValidator : MonoBehaviour
         var diff = Mathf.Abs(angle - recordAngle);
 
         // calculate accuracy (how close the angle is to the record angle)
-        var accuracy = 1 - (diff / 180);
+        var accuracy = Mathf.Abs(1 - (diff / 180));
 
         return new JointValidationResult {
-            accuracy = accuracy * 100,
+            accuracy = accuracy * 100, // to percentage
             difference = diff
         };
     }
 
+    public JointValidationResult CompareAccuracy(JointRecord[] jointRecords) {
+        var totalAccuracy = 0.0f;
+        var totalDifference = 0.0f;
 
+        foreach(var jointRecord in jointRecords) {
+            var result = CompareAccuracy(jointRecord);
+            totalAccuracy += result.accuracy;
+            totalDifference += result.difference;
+        }
+
+        var averageAccuracy = totalAccuracy / jointRecords.Length;
+        var averageDifference = totalDifference / jointRecords.Length;
+
+        return new JointValidationResult {
+            accuracy = averageAccuracy,
+            difference = averageDifference
+        };
+    }
 }
