@@ -1073,7 +1073,7 @@
                     "id": "b055ec16-9082-42a9-9601-d116c3f0120d",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "initialStateCheck": false
                 }
             ],
@@ -1091,6 +1091,28 @@
                 },
                 {
                     "name": "",
+                    "id": "599808a7-960b-4bb8-8f7b-19a9c6ade439",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Move Right Shoulder",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3b75c6a0-9b05-4c05-87f9-a2a876515adc",
+                    "path": "<DualShockGamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Right Shoulder",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "d52166d7-8464-48b5-afb4-0d38529d7008",
                     "path": "<Keyboard>/r",
                     "interactions": "",
@@ -1102,11 +1124,33 @@
                 },
                 {
                     "name": "",
+                    "id": "f1ef0bd6-01c6-40f8-9f95-aef275ba8302",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Right Elbow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "6d18c4b7-9287-4e0e-bb04-b80b9bb78435",
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Keyboard&Mouse",
+                    "groups": ";Keyboard&Mouse;Gamepad",
+                    "action": "Move Left Hip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0ce745a3-1e82-4e1f-ba7f-d78dc3905483",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Move Left Hip",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1124,11 +1168,33 @@
                 },
                 {
                     "name": "",
+                    "id": "5e19c3fb-4e0a-4c40-8390-867299185499",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Left Knee",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "3a768d65-f994-4f73-8f8f-04106ede1a7a",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
+                    "action": "Move Right Hip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "57d858d1-30ee-4b3d-9b2b-80ab93b63a70",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Move Right Hip",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1146,9 +1212,64 @@
                 },
                 {
                     "name": "",
+                    "id": "c630ea3a-31bb-4597-b2a8-35fbf930d40e",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Right Knee",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "eb009d56-6ad8-401a-ae1d-f148feae3cc9",
                     "path": "<Keyboard>/leftShift",
-                    "interactions": "Press(behavior=2)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Inverse Direction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1676cd7f-9605-426f-b91f-72c0cbccba57",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Inverse Direction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "de23076b-7a08-48b7-be6f-5ce78c9739f2",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Inverse Direction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fd9b36a1-f16a-46c8-8fe5-3a006640d119",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Inverse Direction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7d837415-bbb8-4d3e-be99-16a36b5b87bf",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Inverse Direction",
@@ -1168,11 +1289,33 @@
                 },
                 {
                     "name": "",
+                    "id": "b54335ee-0fb0-4a70-89a4-d3151d4727f7",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Left Shoulder",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "a7eb4990-7016-4702-a205-73a9238b4ac6",
                     "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
+                    "action": "Move Left Elbow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "279205c2-4d0c-428c-a631-be58c1f08361",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Move Left Elbow",
                     "isComposite": false,
                     "isPartOfComposite": false
