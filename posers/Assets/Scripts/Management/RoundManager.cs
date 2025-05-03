@@ -1,6 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.Events;
+
+public struct RoundResult {
+    public JointValidationResult result;
+    public string playerName;
+}
 
 public class RoundManager : MonoBehaviour
 {
@@ -9,7 +15,11 @@ public class RoundManager : MonoBehaviour
     [SerializeField] private bool startOnStart = false;
     [SerializeField] private StartTimer timer;
 
+    [SerializeField] private float minimumAccuracy = 80.0f;
     [SerializeField] private JointCollector[] jointCollectors;
+    
+    [SerializeField] private UnityEvent<string> onGameEnded;
+    [SerializeField] private UnityEvent onGameTied;
 
     private List<JointValidator> availablePoses = new List<JointValidator>();
     private JointValidator currentPose;
@@ -37,12 +47,33 @@ public class RoundManager : MonoBehaviour
     public void ValidateRound() {
         Assert.IsTrue(currentPose != null, "Failed to validate round, because no pose is currently active. This should never happen!");
 
+        var collections = new List<RoundResult>();
+
         foreach(var collector in jointCollectors) {
             var recordedJoints = collector.recordedJoints;
             var result = currentPose.CompareAccuracy(recordedJoints);
-            Debug.Log($"Round Result: {result.accuracy}%");
+
+            collections.Add(new RoundResult {
+                result = result,
+                playerName = collector.playerName
+            });
         }
 
+        var accuracyBelowMinimum = collections.FindAll(result => result.result.accuracy < minimumAccuracy);
+
+        // is the game a tie?
+        if(accuracyBelowMinimum.Count == jointCollectors.Length) {
+            onGameTied?.Invoke();
+            return;
+        }
+        
+        // was anyone below the minimum accuracy?
+        if(accuracyBelowMinimum.Count > 0) {
+            onGameEnded?.Invoke(accuracyBelowMinimum[0].playerName);
+            return;
+        }
+
+        // if everyone is above the minimum accuracy, start a new round
         StartRound();
     }
 
