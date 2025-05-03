@@ -57,7 +57,7 @@ public class LimbController : MonoBehaviour
     public void OnMoveLeftShoulder(InputValue value)
     {
         bool pressed = value.isPressed;
-        MoveLimb(leftShoulder, (pressed ? 100 : 0) * (isInversed ? -1 : 1));
+        MoveLimb(leftShoulder, (pressed ? -100 : 0) * (isInversed ? -1 : 1));
     }
     public void OnMoveLeftElbow(InputValue value)
     {
@@ -72,17 +72,17 @@ public class LimbController : MonoBehaviour
     public void OnMoveRightElbow(InputValue value)
     {
         bool pressed = value.isPressed;
-        MoveLimb(rightElbow, (pressed ? 100 : 0) * (isInversed ? -1 : 1));
+        MoveLimb(rightElbow, (pressed ? -100 : 0) * (isInversed ? -1 : 1));
     }
     public void OnMoveLeftHip(InputValue value)
     {
         bool pressed = value.isPressed;
-        MoveLimb(leftHip, (pressed ? 100 : 0) * (isInversed ? -1 : 1));
+        MoveLimb(leftHip, (pressed ? -100 : 0) * (isInversed ? -1 : 1));
     }
     public void OnMoveLeftKnee(InputValue value)
     {
         bool pressed = value.isPressed;
-        MoveLimb(leftKnee, (pressed ? 100 : 0) * (isInversed ? -1 : 1));
+        MoveLimb(leftKnee, (pressed ? -100 : 0) * (isInversed ? -1 : 1));
     }
     public void OnMoveRightHip(InputValue value)
     {
