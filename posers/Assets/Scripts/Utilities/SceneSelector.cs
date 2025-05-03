@@ -10,4 +10,8 @@ public class SceneSelector : MonoBehaviour
     public void Restart() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    public void OnAnyKey() {
+        Restart();
+    }
 }
