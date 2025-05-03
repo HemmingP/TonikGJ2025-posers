@@ -9,7 +9,7 @@
                     "name": "Move",
                     "type": "Value",
                     "id": "351f2ccd-1f9f-44bf-9bec-d62ac5c5f408",
-                    "expectedControlType": "Vector2",
+                    "expectedControlType": "Integer",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -45,7 +45,7 @@
                     "name": "Crouch",
                     "type": "Button",
                     "id": "27c5f898-bc57-4ee1-8800-db469aca5fe3",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -996,9 +996,81 @@
             "id": "e4a15218-8fe8-4aef-9193-0980ae05c99f",
             "actions": [
                 {
-                    "name": "Move left upper arm",
+                    "name": "Move Left Shoulder",
+                    "type": "Button",
+                    "id": "9fb81dd1-6b4f-4281-92ab-c2a094a17f6f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Move Left Elbow",
+                    "type": "Button",
+                    "id": "30264c3a-5f5f-4b71-86e8-07d8f0b3f39e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Move Right Shoulder",
                     "type": "Button",
                     "id": "61c68354-06b7-429c-a382-1c9cef54ba21",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Move Right Elbow",
+                    "type": "Button",
+                    "id": "fab9d098-2505-410c-a503-d93fc05987c2",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Move Left Hip",
+                    "type": "Button",
+                    "id": "19bf09bb-02ac-4d24-ae60-b642202e1793",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Move Left Knee",
+                    "type": "Button",
+                    "id": "5eee65b2-8e6d-4593-9797-333a54cd9852",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Move Right Hip",
+                    "type": "Button",
+                    "id": "718fd8af-de69-400f-9318-3f2da09cfcd4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Move Right Knee",
+                    "type": "Button",
+                    "id": "1e442ef6-0503-42da-8cdd-b9993a0dd882",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Inverse Direction",
+                    "type": "Button",
+                    "id": "b055ec16-9082-42a9-9601-d116c3f0120d",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -1009,11 +1081,99 @@
                 {
                     "name": "",
                     "id": "78c9cc62-fbe4-48a6-b9a2-d3661c3dc63b",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Move Right Shoulder",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d52166d7-8464-48b5-afb4-0d38529d7008",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Move Right Elbow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6d18c4b7-9287-4e0e-bb04-b80b9bb78435",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Move Left Hip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e66224a4-b01b-48d6-a7af-ae99d6643c13",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Move left upper arm",
+                    "action": "Move Left Knee",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3a768d65-f994-4f73-8f8f-04106ede1a7a",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Move Right Hip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8e7e16b7-918b-4d6c-b117-50b3880c47a5",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Move Right Knee",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eb009d56-6ad8-401a-ae1d-f148feae3cc9",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Inverse Direction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b5d4c884-a161-4c5e-9bef-a14ed942944e",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Move Left Shoulder",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a7eb4990-7016-4702-a205-73a9238b4ac6",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Move Left Elbow",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
