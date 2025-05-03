@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private TextMeshPro timerText;
     // [SerializeField] private int remainingTime;
 
     [SerializeField] private UnityEvent onCountdownEnds;
