@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ExitGameButton : MonoBehaviour
+public class MenuQuitButton : MonoBehaviour
 {
     public void OnClickQuit()
     {
