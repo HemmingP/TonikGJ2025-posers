@@ -32,19 +32,67 @@ public class LimbController : MonoBehaviour
 
         if(pressed != isInversed)
         {
+            JointMotor2D leftShoulderMotor = leftShoulder.motor;
+            leftShoulderMotor.motorSpeed *= -1;
+            JointMotor2D leftElbowMotor = leftElbow.motor;
+            leftElbowMotor.motorSpeed *= -1;
             JointMotor2D rightShoulderMotor = rightShoulder.motor;
             rightShoulderMotor.motorSpeed *= -1;
+            JointMotor2D rightElbowMotor = rightElbow.motor;
+            rightElbowMotor.motorSpeed *= -1;
+            JointMotor2D leftHipMotor = leftHip.motor;
+            leftHipMotor.motorSpeed *= -1;
+            JointMotor2D leftKneeMotor = leftKnee.motor;
+            leftKneeMotor.motorSpeed *= -1;
+            JointMotor2D rightHipMotor = rightHip.motor;
+            rightHipMotor.motorSpeed *= -1;
+            JointMotor2D rightKneeMotor = rightKnee.motor;
+            rightKneeMotor.motorSpeed *= -1;
 
             isInversed = pressed;
         }
     }
 
-    // public void OnMoveRightShoulder(int val)
+    
+    public void OnMoveLeftShoulder(InputValue value)
+    {
+        bool pressed = value.isPressed;
+        MoveLimb(leftShoulder, (pressed ? 100 : 0) * (isInversed ? -1 : 1));
+    }
+    public void OnMoveLeftElbow(InputValue value)
+    {
+        bool pressed = value.isPressed;
+        MoveLimb(leftElbow, (pressed ? 100 : 0) * (isInversed ? -1 : 1));
+    }
     public void OnMoveRightShoulder(InputValue value)
     {
         bool pressed = value.isPressed;
-        print("Test..."+pressed); 
         MoveLimb(rightShoulder, (pressed ? 100 : 0) * (isInversed ? -1 : 1));
+    }
+    public void OnMoveRightElbow(InputValue value)
+    {
+        bool pressed = value.isPressed;
+        MoveLimb(rightElbow, (pressed ? 100 : 0) * (isInversed ? -1 : 1));
+    }
+    public void OnMoveLeftHip(InputValue value)
+    {
+        bool pressed = value.isPressed;
+        MoveLimb(leftHip, (pressed ? 100 : 0) * (isInversed ? -1 : 1));
+    }
+    public void OnMoveLeftKnee(InputValue value)
+    {
+        bool pressed = value.isPressed;
+        MoveLimb(leftKnee, (pressed ? 100 : 0) * (isInversed ? -1 : 1));
+    }
+    public void OnMoveRightHip(InputValue value)
+    {
+        bool pressed = value.isPressed;
+        MoveLimb(rightHip, (pressed ? 100 : 0) * (isInversed ? -1 : 1));
+    }
+    public void OnMoveRightKnee(InputValue value)
+    {
+        bool pressed = value.isPressed;
+        MoveLimb(rightKnee, (pressed ? 100 : 0) * (isInversed ? -1 : 1));
     }
 
     private void MoveLimb(HingeJoint2D whatLimb, float motorSpeed)
