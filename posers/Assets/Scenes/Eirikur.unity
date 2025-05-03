@@ -840,6 +840,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 573923775}
   totalSeconds: 120
+  onCountdownEnds:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1866963452
 Transform:
   m_ObjectHideFlags: 0

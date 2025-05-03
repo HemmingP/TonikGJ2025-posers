@@ -1,11 +1,15 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.Events;
 
 public class Timer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private int totalSeconds = 60; // Editable in Inspector
+
+    [SerializeField] private UnityEvent onCountdownEnds;
+
 
     private Coroutine countdownCoroutine;
 
@@ -33,6 +37,6 @@ public class Timer : MonoBehaviour
         }
 
         timerText.text = "00:00";
-        // Optional: trigger event when done
+        onCountdownEnds?.Invoke();
     }
 }
