@@ -18,7 +18,7 @@ public class LimbController : MonoBehaviour
 
     private bool isInversed = false;
 
-    void Start()
+    void Awake()
     {
         hingeJoints = new HingeJoint2D[] {leftShoulder, leftElbow, rightShoulder, rightElbow, leftHip, leftKnee, rightHip, rightKnee};
     }
@@ -62,26 +62,10 @@ public class LimbController : MonoBehaviour
 
         if(pressed != isInversed)
         {
-            if(isInversed)
-                print("Inverse");
-            else
-                print("Not Inverse");
-            JointMotor2D leftShoulderMotor = leftShoulder.motor;
-            leftShoulderMotor.motorSpeed *= -1;
-            JointMotor2D leftElbowMotor = leftElbow.motor;
-            leftElbowMotor.motorSpeed *= -1;
-            JointMotor2D rightShoulderMotor = rightShoulder.motor;
-            rightShoulderMotor.motorSpeed *= -1;
-            JointMotor2D rightElbowMotor = rightElbow.motor;
-            rightElbowMotor.motorSpeed *= -1;
-            JointMotor2D leftHipMotor = leftHip.motor;
-            leftHipMotor.motorSpeed *= -1;
-            JointMotor2D leftKneeMotor = leftKnee.motor;
-            leftKneeMotor.motorSpeed *= -1;
-            JointMotor2D rightHipMotor = rightHip.motor;
-            rightHipMotor.motorSpeed *= -1;
-            JointMotor2D rightKneeMotor = rightKnee.motor;
-            rightKneeMotor.motorSpeed *= -1;
+            foreach(HingeJoint2D hingeJoint in hingeJoints)
+            {
+                MoveLimb(hingeJoint, -hingeJoint.motor.motorSpeed);
+            }
 
             isInversed = pressed;
         }
@@ -90,49 +74,41 @@ public class LimbController : MonoBehaviour
     
     public void OnMoveLeftShoulder(InputValue value)
     {
-        print("OnMoveLeftShoulder");
         bool pressed = value.isPressed;
         MoveLimb(leftShoulder, (pressed ? -motorSpeed : 0) * (isInversed ? -1 : 1));
     }
     public void OnMoveLeftElbow(InputValue value)
     {
-        print("OnMoveLeftElbow");
         bool pressed = value.isPressed;
         MoveLimb(leftElbow, (pressed ? motorSpeed : 0) * (isInversed ? -1 : 1));
     }
     public void OnMoveRightShoulder(InputValue value)
     {
-        print("OnMoveRightShoulder");
         bool pressed = value.isPressed;
         MoveLimb(rightShoulder, (pressed ? motorSpeed : 0) * (isInversed ? -1 : 1));
     }
     public void OnMoveRightElbow(InputValue value)
     {
-        print("OnMoveRightElbow");
         bool pressed = value.isPressed;
         MoveLimb(rightElbow, (pressed ? -motorSpeed : 0) * (isInversed ? -1 : 1));
     }
     public void OnMoveLeftHip(InputValue value)
     {
-        print("OnMoveLeftHip");
         bool pressed = value.isPressed;
         MoveLimb(leftHip, (pressed ? -motorSpeed : 0) * (isInversed ? -1 : 1));
     }
     public void OnMoveLeftKnee(InputValue value)
     {
-        print("OnMoveLeftKnee");
         bool pressed = value.isPressed;
         MoveLimb(leftKnee, (pressed ? -motorSpeed : 0) * (isInversed ? -1 : 1));
     }
     public void OnMoveRightHip(InputValue value)
     {
-        print("OnMoveRightHip");
         bool pressed = value.isPressed;
         MoveLimb(rightHip, (pressed ? motorSpeed : 0) * (isInversed ? -1 : 1));
     }
     public void OnMoveRightKnee(InputValue value)
     {
-        print("OnMoveRightKnee");
         bool pressed = value.isPressed;
         MoveLimb(rightKnee, (pressed ? motorSpeed : 0) * (isInversed ? -1 : 1));
     }
