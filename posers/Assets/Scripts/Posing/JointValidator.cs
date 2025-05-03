@@ -2,7 +2,8 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.Assertions;
 
-public struct JointValidationResult {
+public struct JointValidationResult
+{
     public float accuracy;
     public float difference;
 }
@@ -27,24 +28,28 @@ public class JointValidator : MonoBehaviour
     }
 
 
-    void Start() {
-        if (testReferenceJoints != null) {
+    void Start()
+    {
+        if (testReferenceJoints != null)
+        {
 
             var foundJointsOnTestObject = testReferenceJoints.GetComponentsInChildren<JointRecord>();
             Assert.IsTrue(foundJointsOnTestObject.Length == jointRecords.Count, $"The number of joints on the test object ({foundJointsOnTestObject.Length}) does not match the number of joints registered in the Joint Validator ({jointRecords.Count})");
 
             var totalResults = 0.0f;
-            foreach (var jointRecord in foundJointsOnTestObject) {
+            foreach (var jointRecord in foundJointsOnTestObject)
+            {
                 var result = CompareAccuracy(jointRecord);
                 Debug.Log($"Comparing {jointRecord.joint.name} with {jointRecord.name}\n Accuracy: {result.accuracy}% | Difference: {result.difference}");
 
                 totalResults += result.accuracy;
             }
-            Debug.Log($"Total Accuracy: {totalResults / foundJointsOnTestObject.Length}%");
+            Debug.Log($"{gameObject.name}: Total Accuracy: {totalResults / foundJointsOnTestObject.Length}%");
         }
     }
 
-    public JointValidationResult CompareAccuracy(JointRecord jointRecord) {
+    public JointValidationResult CompareAccuracy(JointRecord jointRecord)
+    {
 
         Assert.IsTrue(jointRecords.ContainsKey(jointRecord.joint.name), $"Unable to compare {jointRecord.joint.name} because it is not registered in the Joint Validator");
         var recordJoint = jointRecords[jointRecord.joint.name];
@@ -57,17 +62,22 @@ public class JointValidator : MonoBehaviour
         // calculate accuracy (how close the angle is to the record angle)
         var accuracy = Mathf.Abs(1 - (diff / 180));
 
-        return new JointValidationResult {
+        Debug.Log($"Comparing {jointRecord.joint.name} with {jointRecord.name}\n Accuracy: {accuracy}% | Difference: {diff}");
+
+        return new JointValidationResult
+        {
             accuracy = accuracy * 100, // to percentage
             difference = diff
         };
     }
 
-    public JointValidationResult CompareAccuracy(JointRecord[] jointRecords) {
+    public JointValidationResult CompareAccuracy(JointRecord[] jointRecords)
+    {
         var totalAccuracy = 0.0f;
         var totalDifference = 0.0f;
 
-        foreach(var jointRecord in jointRecords) {
+        foreach (var jointRecord in jointRecords)
+        {
             var result = CompareAccuracy(jointRecord);
             totalAccuracy += result.accuracy;
             totalDifference += result.difference;
@@ -76,7 +86,10 @@ public class JointValidator : MonoBehaviour
         var averageAccuracy = totalAccuracy / jointRecords.Length;
         var averageDifference = totalDifference / jointRecords.Length;
 
-        return new JointValidationResult {
+        Debug.Log($"{gameObject.name}: Average Accuracy: {averageAccuracy}% | Average Difference: {averageDifference}");
+
+        return new JointValidationResult
+        {
             accuracy = averageAccuracy,
             difference = averageDifference
         };

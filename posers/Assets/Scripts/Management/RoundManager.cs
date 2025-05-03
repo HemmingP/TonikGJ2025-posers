@@ -24,6 +24,7 @@ public class RoundManager : MonoBehaviour
     [SerializeField] private UnityEvent onGameTied;
 
     private List<JointValidator> availablePoses = new List<JointValidator>();
+
     private JointValidator currentPose;
 
     private void Start()
@@ -36,17 +37,29 @@ public class RoundManager : MonoBehaviour
         }
     }
 
-    public void StartRound()
+    private void SetNewPose()
     {
-        if (currentPose != null)
+        if (currentPose == null)
         {
-            currentPose.gameObject.SetActive(false);
+            currentPose = availablePoses[Random.Range(0, availablePoses.Count)];
+            currentPose.gameObject.SetActive(true);
+            return;
         }
 
-        var selectedPose = availablePoses[Random.Range(0, availablePoses.Count)];
-        currentPose = selectedPose;
-        currentPose.gameObject.SetActive(true);
+        var currentlySelectedPose = currentPose;
+        do
+        {
+            currentlySelectedPose = availablePoses[Random.Range(0, availablePoses.Count)];
+        } while (currentlySelectedPose == currentPose);
 
+        currentPose.gameObject.SetActive(false);
+        currentPose = currentlySelectedPose;
+        currentPose.gameObject.SetActive(true);
+    }
+
+    public void StartRound()
+    {
+        this.SetNewPose();
         timer.TriggerTimer();
         timer.ReduceTotalSeconds(reductionInSecondsPerRound);
     }
