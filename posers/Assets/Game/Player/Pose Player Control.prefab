@@ -98,6 +98,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3546165587253839176, guid: d8ac958eae99240969f92fef3222eb2d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3663901579099185968}
+    - targetCorrespondingSourceObject: {fileID: 3546165587253839176, guid: d8ac958eae99240969f92fef3222eb2d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 847062987608308554}
     - targetCorrespondingSourceObject: {fileID: 4484116218254464857, guid: d8ac958eae99240969f92fef3222eb2d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5082486569642456322}
@@ -521,7 +524,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.33300018, y: 0.302}
+  m_ConnectedAnchor: {x: -0.33300018, y: 0.30199996}
   m_UseConnectedAnchor: 1
   m_UseMotor: 1
   m_Motor:
@@ -672,7 +675,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.01499994, y: -0.41300002}
+  m_ConnectedAnchor: {x: -0.01499988, y: -0.413}
   m_UseConnectedAnchor: 1
   m_UseMotor: 1
   m_Motor:
@@ -730,7 +733,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.007999897, y: -0.4860001}
+  m_ConnectedAnchor: {x: -0.007999897, y: -0.48600006}
   m_UseConnectedAnchor: 1
   m_UseMotor: 1
   m_Motor:
@@ -1080,6 +1083,19 @@ MonoBehaviour:
   leftKnee: {fileID: 970772041089448710}
   rightHip: {fileID: 1997583241906524557}
   rightKnee: {fileID: 5041969879544745263}
+--- !u!114 &847062987608308554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5176353045265054279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c408d448db14a0a9180726fbe7a5ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerOfJoints: Angelo
 --- !u!1 &5249610064256444502 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4484116218254464857, guid: d8ac958eae99240969f92fef3222eb2d, type: 3}
@@ -1160,7 +1176,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.35699987, y: 0.30199993}
+  m_ConnectedAnchor: {x: 0.35699987, y: 0.3019999}
   m_UseConnectedAnchor: 1
   m_UseMotor: 1
   m_Motor:
@@ -1387,7 +1403,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.014999965, y: -0.3749999}
+  m_ConnectedAnchor: {x: -0.014999925, y: -0.37499988}
   m_UseConnectedAnchor: 1
   m_UseMotor: 1
   m_Motor:
@@ -1614,7 +1630,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.1630001, y: -0.51199996}
+  m_ConnectedAnchor: {x: -0.1630001, y: -0.512}
   m_UseConnectedAnchor: 1
   m_UseMotor: 1
   m_Motor:
