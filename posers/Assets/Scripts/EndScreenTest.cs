@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EndScreenTest : MonoBehaviour
 {
-    public ToggleScreen toggleScreen;
+    public EndScreen toggleScreen;
     public float time = 4f;
     private float currentTime = 0;
 
