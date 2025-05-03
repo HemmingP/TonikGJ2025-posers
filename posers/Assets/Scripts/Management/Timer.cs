@@ -18,6 +18,7 @@ public class Timer : MonoBehaviour
         if (countdownCoroutine == null)
         {
             countdownCoroutine = StartCoroutine(Countdown(totalSeconds));
+            countdownCoroutine = null;
         }
     }
 
