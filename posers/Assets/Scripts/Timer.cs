@@ -6,22 +6,22 @@ using UnityEngine.Events;
 public class Timer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timerText;
-    [SerializeField] private int totalSeconds = 60; // Editable in Inspector
+    // [SerializeField] private int remainingTime;
 
     [SerializeField] private UnityEvent onCountdownEnds;
 
 
     private Coroutine countdownCoroutine;
 
-    public void StartCountdown()
-    {
+    public void StartCountdown(int totalSeconds)
+    {   
         if (countdownCoroutine == null)
         {
-            countdownCoroutine = StartCoroutine(Countdown());
+            countdownCoroutine = StartCoroutine(Countdown(totalSeconds));
         }
     }
 
-    private IEnumerator Countdown()
+    private IEnumerator Countdown(int totalSeconds)
     {
         int remainingTime = totalSeconds;
 
