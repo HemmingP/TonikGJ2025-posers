@@ -1,10 +1,13 @@
 using System.Threading;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Linq;
 
 [RequireComponent (typeof(PlayerInput))]
+[RequireComponent (typeof(AudioSource))]
 public class LimbController : MonoBehaviour
 {
+    public AudioClip[] characterBendingClips;
     public float motorSpeed = 100;
     public HingeJoint2D leftShoulder;
     public HingeJoint2D leftElbow;
@@ -14,8 +17,9 @@ public class LimbController : MonoBehaviour
     public HingeJoint2D leftKnee;
     public HingeJoint2D rightHip;
     public HingeJoint2D rightKnee;
-    private HingeJoint2D[] hingeJoints;
 
+    private AudioSource audioSource => GetComponent<AudioSource>();
+    private HingeJoint2D[] hingeJoints;
     private bool isInversed = false;
 
     void Awake()
@@ -29,6 +33,11 @@ public class LimbController : MonoBehaviour
         foreach(HingeJoint2D hingeJoint2D in hingeJoints)
         {
             MonitorJoint(hingeJoint2D);
+        }
+
+        if(hingeJoints.Any(hingeJoint => hingeJoint.jointSpeed > 0.1) == false)
+        {
+            audioSource.Stop();
         }
     }
 
@@ -117,5 +126,19 @@ private void MoveLimb(HingeJoint2D joint, float speed)
 {
     joint.useMotor = speed != 0;
     joint.motor = new JointMotor2D { motorSpeed = speed, maxMotorTorque = 10000 };
+
+    if(speed > 0)
+    {
+        // Play a sound if nothing is playing
+
+        if(!audioSource.isPlaying)
+        {
+            AudioClip playAudioClip = characterBendingClips[Random.Range(0,characterBendingClips.Length)];
+
+            audioSource.resource = playAudioClip;
+            audioSource.Play();
+        }
+    }
 }
+
 }
