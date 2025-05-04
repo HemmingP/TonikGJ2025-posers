@@ -23,6 +23,8 @@ public class RoundManager : MonoBehaviour
     [SerializeField] private UnityEvent<string> onGameEnded;
     [SerializeField] private UnityEvent onGameTied;
 
+    [SerializeField] private UnityEvent onRoundEnded;
+
     private List<JointValidator> availablePoses = new List<JointValidator>();
 
     private JointValidator currentPose;
@@ -102,6 +104,7 @@ public class RoundManager : MonoBehaviour
         }
 
         // if everyone is above the minimum accuracy, start a new round
+        onRoundEnded?.Invoke();
         StartRound();
     }
 

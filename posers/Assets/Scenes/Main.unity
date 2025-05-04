@@ -489,6 +489,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onRoundEnded:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7503309593770994677}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: blink
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 149587489}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: blink
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &55088481
 Transform:
   m_ObjectHideFlags: 0
@@ -577,6 +604,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f63974abb2a40448da53eddba720c245, type: 3}
+--- !u!95 &149587489 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3948265057358991706, guid: f63974abb2a40448da53eddba720c245, type: 3}
+  m_PrefabInstance: {fileID: 149587488}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &155358907 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5807217821659461680, guid: e079ddfb1485248fe9503908ced7eed3, type: 3}
@@ -2329,6 +2361,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e079ddfb1485248fe9503908ced7eed3, type: 3}
+--- !u!95 &7503309593770994677 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7520489648082079356, guid: e079ddfb1485248fe9503908ced7eed3, type: 3}
+  m_PrefabInstance: {fileID: 7503309593770994676}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
