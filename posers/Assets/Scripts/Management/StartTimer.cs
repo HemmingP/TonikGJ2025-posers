@@ -6,6 +6,11 @@ public class StartTimer : MonoBehaviour
     [SerializeField] private int totalSeconds = 60; // Editable in Inspector
 
 
+    public void ReduceTotalSeconds(int seconds)
+    {
+        totalSeconds = Mathf.Max(5, totalSeconds - seconds);
+    }
+
     public void TriggerTimer()
     {
         if (timer != null)
