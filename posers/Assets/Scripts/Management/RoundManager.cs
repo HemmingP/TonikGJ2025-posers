@@ -73,7 +73,7 @@ public class RoundManager : MonoBehaviour
         foreach (var collector in jointCollectors)
         {
             var recordedJoints = collector.recordedJoints;
-            var result = currentPose.CompareAccuracy(recordedJoints);
+            var result = currentPose.CompareAccuracy(recordedJoints, minimumAccuracy);
 
             collections.Add(new RoundResult
             {

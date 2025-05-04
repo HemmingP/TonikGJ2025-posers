@@ -230,3 +230,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   testReferenceJoints: {fileID: 0}
+  testMinimumAccuracy: 80
+  maxTolerance: 180
