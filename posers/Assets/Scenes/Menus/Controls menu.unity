@@ -819,6 +819,7 @@ GameObject:
   - component: {fileID: 964908313}
   - component: {fileID: 964908312}
   - component: {fileID: 964908311}
+  - component: {fileID: 964908314}
   m_Layer: 5
   m_Name: Go Back
   m_TagString: Untagged
@@ -891,14 +892,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1108699295}
         m_TargetAssemblyTypeName: SceneSelector, Assembly-CSharp
-        m_MethodName: Quit
-        m_Mode: 1
+        m_MethodName: LoadScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Main Menu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &964908312
@@ -921,7 +922,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8695018848087917711, guid: a6c38b1f252034e41b439f017c1af991, type: 3}
+  m_Sprite: {fileID: -1130996680862647892, guid: b07af87ac0f33104ea06a4d141d384ff, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -939,6 +940,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 964908308}
   m_CullTransparentMesh: 1
+--- !u!114 &964908314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964908308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cbb8c92c4b04a079483024eef334e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1108699293
 GameObject:
   m_ObjectHideFlags: 0
