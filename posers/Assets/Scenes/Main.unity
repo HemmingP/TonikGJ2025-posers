@@ -438,6 +438,18 @@ MonoBehaviour:
   onGameEnded:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1323815517}
+        m_TargetAssemblyTypeName: WinningTargetProcessor, Assembly-CSharp
+        m_MethodName: ProcessWinningTarget
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 989518555}
         m_TargetAssemblyTypeName: EndScreen, Assembly-CSharp
         m_MethodName: Toggle
@@ -450,10 +462,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 989518555}
-        m_TargetAssemblyTypeName: EndScreen, Assembly-CSharp
-        m_MethodName: WriteWinner
-        m_Mode: 0
+  onGameTied:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1323815517}
+        m_TargetAssemblyTypeName: WinningTargetProcessor, Assembly-CSharp
+        m_MethodName: ProcessWinningTarget
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -462,9 +477,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onGameTied:
-    m_PersistentCalls:
-      m_Calls:
       - m_Target: {fileID: 989518555}
         m_TargetAssemblyTypeName: EndScreen, Assembly-CSharp
         m_MethodName: Toggle
@@ -492,6 +504,7 @@ Transform:
   m_Children:
   - {fileID: 1840798756}
   - {fileID: 777890278}
+  - {fileID: 1323815516}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &55088482
@@ -1214,6 +1227,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6927703916105130572, guid: c3638eaeabc6cca46a5e6b046994e935, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7556965122680436832, guid: c3638eaeabc6cca46a5e6b046994e935, type: 3}
       propertyPath: m_text
       value: Both of you Loseth!
@@ -1339,6 +1356,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1323815515
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1323815516}
+  - component: {fileID: 1323815517}
+  m_Layer: 0
+  m_Name: Winning Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1323815516
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323815515}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 55088481}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1323815517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323815515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7225fda6f43e843149259f34199f9f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endScreen: {fileID: 989518555}
+  targets:
+  - playerName: Angelo
+    target: 1
+  - playerName: Franz
+    target: 2
 --- !u!1 &1376031973
 GameObject:
   m_ObjectHideFlags: 0

@@ -97,7 +97,7 @@ public class RoundManager : MonoBehaviour
             var winningPlayer = collections.Find(result => result.result.accuracy >= minimumAccuracy);
             var playerName = winningPlayer.playerName;
 
-            onGameEnded?.Invoke($"{playerName} Wins!");
+            onGameEnded?.Invoke(playerName);
             return;
         }
 
