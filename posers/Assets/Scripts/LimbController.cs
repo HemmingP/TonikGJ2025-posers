@@ -43,6 +43,9 @@ public class LimbController : MonoBehaviour
                 audioSource.Stop();
             }
         }
+        else{
+            audioSource.volume += Time.deltaTime / 0.2f;
+        }
     }
 
     private void MonitorJoint(HingeJoint2D joint)
