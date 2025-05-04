@@ -661,7 +661,7 @@ MonoBehaviour:
     Biskopst\xF8\nJ\xF3hann \xD8ster\xF8\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 81a6c483274cb48659087446bc00ba32, type: 2}
-  m_sharedMaterial: {fileID: 9185885422279778239, guid: 81a6c483274cb48659087446bc00ba32, type: 2}
+  m_sharedMaterial: {fileID: 2549056040668669985, guid: 81a6c483274cb48659087446bc00ba32, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
