@@ -44,7 +44,7 @@ PolygonCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 939511809e24d4c0a875f205e1e26981, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -165,7 +165,7 @@ SpriteRenderer:
   m_SortingLayerID: 864246917
   m_SortingLayer: -1
   m_SortingOrder: 30
-  m_Sprite: {fileID: -5212000074663769135, guid: b7e511cf00e134ec99137baef4e2cd00, type: 3}
+  m_Sprite: {fileID: -7460859623678168061, guid: c2b829b5e7d2c4ddab1fa7d437c7d73d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
