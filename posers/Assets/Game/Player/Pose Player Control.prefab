@@ -38,7 +38,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4668862418118017570, guid: d8ac958eae99240969f92fef3222eb2d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.91102
+      value: -0.45
       objectReference: {fileID: 0}
     - target: {fileID: 4668862418118017570, guid: d8ac958eae99240969f92fef3222eb2d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -527,7 +527,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.33300018, y: 0.30200005}
+  m_ConnectedAnchor: {x: -0.33300018, y: 0.302}
   m_UseConnectedAnchor: 1
   m_UseMotor: 1
   m_Motor:
@@ -678,7 +678,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.015, y: -0.41300008}
+  m_ConnectedAnchor: {x: -0.01499994, y: -0.41300008}
   m_UseConnectedAnchor: 1
   m_UseMotor: 1
   m_Motor:
@@ -736,7 +736,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.007999897, y: -0.4860003}
+  m_ConnectedAnchor: {x: -0.007999897, y: -0.48600012}
   m_UseConnectedAnchor: 1
   m_UseMotor: 1
   m_Motor:
@@ -1124,7 +1124,7 @@ AudioSource:
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 0.96
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -1514,7 +1514,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.015000084, y: -0.3749999}
+  m_ConnectedAnchor: {x: -0.014999965, y: -0.3749999}
   m_UseConnectedAnchor: 1
   m_UseMotor: 1
   m_Motor:
@@ -1741,7 +1741,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.16300009, y: -0.51199985}
+  m_ConnectedAnchor: {x: -0.16300009, y: -0.51199996}
   m_UseConnectedAnchor: 1
   m_UseMotor: 1
   m_Motor:
@@ -1799,7 +1799,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.16599989, y: -0.5120001}
+  m_ConnectedAnchor: {x: 0.16599989, y: -0.512}
   m_UseConnectedAnchor: 1
   m_UseMotor: 1
   m_Motor:
