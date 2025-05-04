@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.Assertions;
+using System.Collections;
 
 public struct JointValidationResult
 {
@@ -11,7 +12,9 @@ public struct JointValidationResult
 
 public class JointValidator : MonoBehaviour
 {
-    [SerializeField] private GameObject testReferenceJoints;
+    [SerializeField] private JointCollector testReferenceJoints;
+    [SerializeField] private float testMinimumAccuracy = 80.0f;
+    [SerializeField] private float maxTolerance = 170.0f;
 
     private Dictionary<string, JointRecord> jointRecords;
 
@@ -32,20 +35,19 @@ public class JointValidator : MonoBehaviour
     {
         if (testReferenceJoints != null)
         {
-
-            var foundJointsOnTestObject = testReferenceJoints.GetComponentsInChildren<JointRecord>();
-            Assert.IsTrue(foundJointsOnTestObject.Length == jointRecords.Count, $"The number of joints on the test object ({foundJointsOnTestObject.Length}) does not match the number of joints registered in the Joint Validator ({jointRecords.Count})");
-
-            var totalResults = 0.0f;
-            foreach (var jointRecord in foundJointsOnTestObject)
-            {
-                var result = CompareAccuracy(jointRecord);
-                Debug.Log($"Comparing {jointRecord.joint.name} with {jointRecord.name}\n Accuracy: {result.accuracy}% | Difference: {result.difference}");
-
-                totalResults += result.accuracy;
-            }
-            Debug.Log($"{gameObject.name}: Total Accuracy: {totalResults / foundJointsOnTestObject.Length}%");
+            StartCoroutine(TestValidateJoints());
         }
+    }
+
+    IEnumerator TestValidateJoints()
+    {
+
+        while (true)
+        {
+            yield return new WaitForSeconds(2);
+            CompareAccuracy(testReferenceJoints.recordedJoints, testMinimumAccuracy);
+        }
+
     }
 
     public JointValidationResult CompareAccuracy(JointRecord jointRecord)
@@ -54,24 +56,27 @@ public class JointValidator : MonoBehaviour
         Assert.IsTrue(jointRecords.ContainsKey(jointRecord.joint.name), $"Unable to compare {jointRecord.joint.name} because it is not registered in the Joint Validator");
         var recordJoint = jointRecords[jointRecord.joint.name];
 
-        var angle = Mathf.Abs(jointRecord.angle);
-        var recordAngle = Mathf.Abs(recordJoint.angle);
+        var angle = jointRecord.Angle;
+        var recordAngle = recordJoint.Angle;
 
-        var diff = Mathf.Abs(angle - recordAngle);
+        // Calculate the shortest difference between the angles
+        var delta = Mathf.DeltaAngle(angle, recordAngle);
+        var diff = Mathf.Abs(delta);
 
-        // calculate accuracy (how close the angle is to the record angle)
-        var accuracy = Mathf.Abs(1 - (diff / 180));
+        // Calculate accuracy: 1 - (normalized difference)
+        // Normalized difference is diff / 180 (max possible difference)
+        var accuracy = (1.0f - (diff / maxTolerance)) * 100.0f; // Use floats for division
 
-        Debug.Log($"Comparing {jointRecord.joint.name} with {jointRecord.name}\n Accuracy: {accuracy}% | Difference: {diff}");
+        Debug.Log($"Comparing {jointRecord.joint.name} with {recordJoint.name}\n Angle: {angle:F1} | Record: {recordAngle:F1} | Difference: {diff:F1} | Accuracy: {accuracy:F1}%");
 
         return new JointValidationResult
         {
-            accuracy = accuracy * 100, // to percentage
+            accuracy = accuracy,
             difference = diff
         };
     }
 
-    public JointValidationResult CompareAccuracy(JointRecord[] jointRecords)
+    public JointValidationResult CompareAccuracy(JointRecord[] jointRecords, float minimumAccuracy = 0.0f)
     {
         var totalAccuracy = 0.0f;
         var totalDifference = 0.0f;
@@ -79,8 +84,11 @@ public class JointValidator : MonoBehaviour
         foreach (var jointRecord in jointRecords)
         {
             var result = CompareAccuracy(jointRecord);
-            totalAccuracy += result.accuracy;
-            totalDifference += result.difference;
+            if (result.accuracy > minimumAccuracy)
+            {
+                totalAccuracy += result.accuracy;
+                totalDifference += result.difference;
+            }
         }
 
         var averageAccuracy = totalAccuracy / jointRecords.Length;

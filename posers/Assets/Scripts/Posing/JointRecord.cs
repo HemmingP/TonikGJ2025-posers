@@ -3,32 +3,40 @@ using UnityEngine;
 public class JointRecord : MonoBehaviour
 {
   public ScriptableEnum joint;
-  
+
   [Tooltip("If there is a parent, but it is a neighbouring object, instead of a direct transform parent")]
   public GameObject manualParent;
-  
+
   private void OnDrawGizmos()
   {
     Gizmos.color = Color.red;
     Gizmos.DrawWireSphere(transform.position, 0.1f);
   }
 
-  public float angle {
-    get {
-      if (manualParent == null) {
+  public float Angle
+  {
+    get
+    {
+      if (manualParent == null)
+      {
+        // If no manual parent is specified, return the standard local rotation's Z angle.
         return transform.localRotation.eulerAngles.z;
       }
+      else
+      {
+        // Get the world rotation of the manual parent and this joint.
+        Quaternion parentWorldRotation = manualParent.transform.rotation;
+        Quaternion childWorldRotation = transform.rotation;
 
-      // convert the rotation of this object to be calculated as if it was the child of the manual parent object
-      var parentMatrix = manualParent.transform.localToWorldMatrix;
-      var thisMatrix = transform.localToWorldMatrix;
+        // Calculate the rotation of the child relative to the parent.
+        // This is done by multiplying the inverse of the parent's world rotation
+        // by the child's world rotation.
+        Quaternion relativeRotation = Quaternion.Inverse(parentWorldRotation) * childWorldRotation;
 
-      var parentRotation = parentMatrix.rotation.eulerAngles.z;
-      var thisRotation = thisMatrix.rotation.eulerAngles.z;
-
-      return thisRotation - parentRotation;
+        // Return the Z Euler angle from the calculated relative rotation.
+        // This represents the joint's angle as if it were a direct child of the manualParent.
+        return relativeRotation.eulerAngles.z;
+      }
     }
   }
-
-
 }
