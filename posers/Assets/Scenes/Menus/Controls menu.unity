@@ -597,7 +597,7 @@ MonoBehaviour:
   m_text: How to play
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 81a6c483274cb48659087446bc00ba32, type: 2}
-  m_sharedMaterial: {fileID: 9185885422279778239, guid: 81a6c483274cb48659087446bc00ba32, type: 2}
+  m_sharedMaterial: {fileID: 2549056040668669985, guid: 81a6c483274cb48659087446bc00ba32, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -621,8 +621,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 34.94
+  m_fontSizeBase: 34.94
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1529,7 +1529,7 @@ MonoBehaviour:
     Change direction: (Hold) Right Shift'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 81a6c483274cb48659087446bc00ba32, type: 2}
-  m_sharedMaterial: {fileID: 9185885422279778239, guid: 81a6c483274cb48659087446bc00ba32, type: 2}
+  m_sharedMaterial: {fileID: 2549056040668669985, guid: 81a6c483274cb48659087446bc00ba32, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
