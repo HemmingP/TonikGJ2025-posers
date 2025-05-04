@@ -37,14 +37,14 @@ public class LimbController : MonoBehaviour
 
         if(hingeJoints.Any(hingeJoint => hingeJoint.jointSpeed > 0.1) == false)
         {
-            audioSource.volume -= Time.deltaTime / 0.2f;
+            audioSource.volume -= Time.deltaTime / 0.1f;
             if(audioSource.volume == 0)
             {
                 audioSource.Stop();
             }
         }
         else{
-            audioSource.volume += Time.deltaTime / 0.2f;
+            audioSource.volume += Time.deltaTime / 0.1f;
         }
     }
 
