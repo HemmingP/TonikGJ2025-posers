@@ -6,11 +6,14 @@ public struct WinningTarget
 {
     public string playerName;
     public WinStatus target;
+    public Transform confettiSpawnPoint;
 }
 
 public class WinningTargetProcessor : MonoBehaviour
 {
     [SerializeField] private EndScreen endScreen;
+
+    [SerializeField] private ParticleSystem confetti;
 
     [SerializeField] private WinningTarget[] targets;
 
@@ -42,5 +45,8 @@ public class WinningTargetProcessor : MonoBehaviour
         endScreen.WriteWinner($"{target.playerName} Wins!");
         endScreen.PlayEndSound(target.target);
 
+        var confettiInstance = Instantiate(confetti, target.confettiSpawnPoint.position, Quaternion.identity);
+        confettiInstance.Play();
+        Destroy(confettiInstance.gameObject, confettiInstance.main.duration);
     }
 }
