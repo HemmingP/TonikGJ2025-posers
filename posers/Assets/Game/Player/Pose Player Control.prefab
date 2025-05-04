@@ -34,11 +34,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4668862418118017570, guid: d8ac958eae99240969f92fef3222eb2d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.562631
+      value: 0.14435
       objectReference: {fileID: 0}
     - target: {fileID: 4668862418118017570, guid: d8ac958eae99240969f92fef3222eb2d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.14803776
+      value: -1.91102
       objectReference: {fileID: 0}
     - target: {fileID: 4668862418118017570, guid: d8ac958eae99240969f92fef3222eb2d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -101,6 +101,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3546165587253839176, guid: d8ac958eae99240969f92fef3222eb2d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 847062987608308554}
+    - targetCorrespondingSourceObject: {fileID: 3546165587253839176, guid: d8ac958eae99240969f92fef3222eb2d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6523147964064301417}
     - targetCorrespondingSourceObject: {fileID: 4484116218254464857, guid: d8ac958eae99240969f92fef3222eb2d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5082486569642456322}
@@ -524,7 +527,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.33300018, y: 0.30199996}
+  m_ConnectedAnchor: {x: -0.33300018, y: 0.30200005}
   m_UseConnectedAnchor: 1
   m_UseMotor: 1
   m_Motor:
@@ -675,7 +678,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.01499988, y: -0.413}
+  m_ConnectedAnchor: {x: -0.015, y: -0.41300008}
   m_UseConnectedAnchor: 1
   m_UseMotor: 1
   m_Motor:
@@ -733,7 +736,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.007999897, y: -0.48600006}
+  m_ConnectedAnchor: {x: -0.007999897, y: -0.4860003}
   m_UseConnectedAnchor: 1
   m_UseMotor: 1
   m_Motor:
@@ -1074,6 +1077,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3891523e1eb2894098718876e66683a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterBendingClips:
+  - {fileID: 8300000, guid: 13eb2a1300f96aa4c928b29bcdbc573b, type: 3}
+  - {fileID: 8300000, guid: d405c23c29e1f9646b4e4c4bae94294c, type: 3}
+  - {fileID: 8300000, guid: 0826f7a9fae2f584095a414b1944650b, type: 3}
+  - {fileID: 8300000, guid: 4873961e12b70424e82cbaf6fec32e35, type: 3}
+  - {fileID: 8300000, guid: 3449ddc84d0af084d941de46a5e000f8, type: 3}
+  - {fileID: 8300000, guid: a54608aac762ab140a2daa274e76a357, type: 3}
+  - {fileID: 8300000, guid: 6038310e7f694d645861a3605d7c3d97, type: 3}
+  - {fileID: 8300000, guid: a31c017c1306dfc478ad0d0ff275babb, type: 3}
+  - {fileID: 8300000, guid: 3a6939815016cef4980d2a45084457ac, type: 3}
+  - {fileID: 8300000, guid: bfa0f4564f9a61f498d34582ce4f0b2c, type: 3}
   motorSpeed: 100
   leftShoulder: {fileID: 7190109189811461505}
   leftElbow: {fileID: 1000158624932257080}
@@ -1096,6 +1110,103 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownerOfJoints: Angelo
+--- !u!82 &6523147964064301417
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5176353045265054279}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &5249610064256444502 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4484116218254464857, guid: d8ac958eae99240969f92fef3222eb2d, type: 3}
@@ -1176,7 +1287,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.35699987, y: 0.3019999}
+  m_ConnectedAnchor: {x: 0.35699987, y: 0.30199993}
   m_UseConnectedAnchor: 1
   m_UseMotor: 1
   m_Motor:
@@ -1345,7 +1456,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.007999897, y: -0.48600003}
+  m_ConnectedAnchor: {x: 0.007999897, y: -0.48600006}
   m_UseConnectedAnchor: 1
   m_UseMotor: 1
   m_Motor:
@@ -1403,7 +1514,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.014999925, y: -0.37499988}
+  m_ConnectedAnchor: {x: -0.015000084, y: -0.3749999}
   m_UseConnectedAnchor: 1
   m_UseMotor: 1
   m_Motor:
@@ -1630,7 +1741,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.1630001, y: -0.512}
+  m_ConnectedAnchor: {x: -0.16300009, y: -0.51199985}
   m_UseConnectedAnchor: 1
   m_UseMotor: 1
   m_Motor:
@@ -1688,7 +1799,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.16599989, y: -0.512}
+  m_ConnectedAnchor: {x: 0.16599989, y: -0.5120001}
   m_UseConnectedAnchor: 1
   m_UseMotor: 1
   m_Motor:
