@@ -27,7 +27,7 @@
                     "name": "Attack",
                     "type": "Button",
                     "id": "6c2ab1b8-8984-453a-af3d-a3c78ae1679a",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -72,7 +72,7 @@
                     "name": "Next",
                     "type": "Button",
                     "id": "b7230bb6-fc9b-4f52-8b25-f5e19cb2c2ba",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -492,7 +492,7 @@
                     "name": "Submit",
                     "type": "Button",
                     "id": "7607c7b6-cd76-4816-beef-bd0341cfe950",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -501,7 +501,7 @@
                     "name": "Cancel",
                     "type": "Button",
                     "id": "15cef263-9014-4fd5-94d9-4e4a6234a6ef",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -1008,6 +1008,17 @@
                     "action": "Any Key",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5355ed6c-74d1-403d-9fce-ef618acc2bc5",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Any Key",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -1133,6 +1144,17 @@
                 },
                 {
                     "name": "",
+                    "id": "bd3226c8-1835-45fb-8d12-cad67ebe1d0a",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Right Shoulder",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "d52166d7-8464-48b5-afb4-0d38529d7008",
                     "path": "<Keyboard>/r",
                     "interactions": "",
@@ -1146,6 +1168,17 @@
                     "name": "",
                     "id": "f1ef0bd6-01c6-40f8-9f95-aef275ba8302",
                     "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Right Elbow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0c7ddf4a-4f66-4f95-ba06-f437c8b3762b",
+                    "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1177,6 +1210,17 @@
                 },
                 {
                     "name": "",
+                    "id": "d2cb461a-fde4-4d19-892f-274420d3884b",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Left Hip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "e66224a4-b01b-48d6-a7af-ae99d6643c13",
                     "path": "<Keyboard>/a",
                     "interactions": "",
@@ -1190,6 +1234,17 @@
                     "name": "",
                     "id": "5e19c3fb-4e0a-4c40-8390-867299185499",
                     "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Left Knee",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6c828f0b-ceb4-469f-a956-31a217c42914",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1221,6 +1276,17 @@
                 },
                 {
                     "name": "",
+                    "id": "47c0af2f-cf4f-4206-bcf3-b7911d7794c1",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Right Hip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "8e7e16b7-918b-4d6c-b117-50b3880c47a5",
                     "path": "<Keyboard>/f",
                     "interactions": "",
@@ -1234,6 +1300,17 @@
                     "name": "",
                     "id": "c630ea3a-31bb-4597-b2a8-35fbf930d40e",
                     "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Right Knee",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "900f4383-0834-4a49-96f5-8e63ac40d581",
+                    "path": "<Keyboard>/f",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1320,6 +1397,17 @@
                 },
                 {
                     "name": "",
+                    "id": "ce7fd6d3-1858-4651-b104-f4cad27f9e11",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Left Shoulder",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "a7eb4990-7016-4702-a205-73a9238b4ac6",
                     "path": "<Keyboard>/q",
                     "interactions": "",
@@ -1333,6 +1421,17 @@
                     "name": "",
                     "id": "279205c2-4d0c-428c-a631-be58c1f08361",
                     "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Left Elbow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7175d205-a681-4452-a7a4-affe539d97e4",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1464,6 +1563,17 @@
                 },
                 {
                     "name": "",
+                    "id": "a386c741-7015-46d5-90da-432aca4edcb2",
+                    "path": "<Keyboard>/o",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Right Shoulder",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "fe109808-acfa-4ee3-b9c5-7d86cfd30842",
                     "path": "<Keyboard>/p",
                     "interactions": "",
@@ -1477,6 +1587,17 @@
                     "name": "",
                     "id": "c09742d7-b07c-4401-88db-589407c2e18a",
                     "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Right Elbow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1383ae0d-4e46-4074-a80b-e876f2bce397",
+                    "path": "<Keyboard>/p",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1508,6 +1629,17 @@
                 },
                 {
                     "name": "",
+                    "id": "432f52d3-a9ff-4dc6-b4a6-0ea80933894b",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Left Hip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "9922b2a6-3df3-4034-a904-bfb46ee816ea",
                     "path": "<Keyboard>/h",
                     "interactions": "",
@@ -1521,6 +1653,17 @@
                     "name": "",
                     "id": "a2d6317f-b14c-47fb-9ffd-fc003b6c87a0",
                     "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Left Knee",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c3d0b37b-bd25-417f-a4df-c3c89b8b56ce",
+                    "path": "<Keyboard>/h",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1552,6 +1695,17 @@
                 },
                 {
                     "name": "",
+                    "id": "f4792ae4-0343-4bb4-99bf-3f373dc64c5c",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Right Hip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "e7bb5b4f-31a4-449c-b6e3-0970d4ef64f4",
                     "path": "<Keyboard>/l",
                     "interactions": "",
@@ -1565,6 +1719,17 @@
                     "name": "",
                     "id": "d3cd6801-eb79-4f61-aab5-8f674e8f9f89",
                     "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Right Knee",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "86c999da-be64-4498-a19d-2f47490919db",
+                    "path": "<Keyboard>/l",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1651,6 +1816,17 @@
                 },
                 {
                     "name": "",
+                    "id": "ec458a34-24b4-4564-af51-854bbe48334b",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Left Shoulder",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "f8a4b6f7-5a68-4108-be2e-aaaaac27c106",
                     "path": "<Keyboard>/u",
                     "interactions": "",
@@ -1664,6 +1840,17 @@
                     "name": "",
                     "id": "420d8086-3bdd-4bc2-a801-ceed440a6517",
                     "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Left Elbow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b3210824-411a-4932-9f36-ad8f5d10c448",
+                    "path": "<Keyboard>/u",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1730,6 +1917,28 @@
             "devices": [
                 {
                     "devicePath": "<XRController>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Left Keyboard",
+            "bindingGroup": "Left Keyboard",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Right Keyboard",
+            "bindingGroup": "Right Keyboard",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
                     "isOptional": false,
                     "isOR": false
                 }
